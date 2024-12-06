@@ -1,0 +1,17 @@
+﻿@model IEnumerable<SportsStore.Models.Product>
+
+@if (Model != null && Model.Any())
+{
+    @foreach (var p in Model)
+    {
+        <div>
+            <h3>@p.Name</h3>
+            <p>@p.Description</p>
+            <h4>@p.Price.ToString("c")</h4>
+        </div>
+    }
+}
+else
+{
+    <p>No products found.</p>
+}
